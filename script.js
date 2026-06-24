@@ -46,9 +46,16 @@
   /* ----- Before / After slider ----- */
   document.querySelectorAll(".ba-slider").forEach(function (slider) {
     var before = slider.querySelector(".ba-before");
+    var beforeImg = slider.querySelector(".ba-before img");
     var handle = slider.querySelector(".ba-handle");
     var range = slider.querySelector(".ba-range");
     if (!before || !handle) return;
+
+    var syncBeforeImageWidth = function () {
+      if (!beforeImg) return;
+      var w = slider.offsetWidth;
+      if (w > 0) beforeImg.style.width = w + "px";
+    };
 
     var setPosition = function (percent) {
       var p = Math.max(0, Math.min(100, percent));
@@ -57,6 +64,12 @@
       handle.setAttribute("aria-valuenow", Math.round(p));
       if (range) range.value = p;
     };
+
+    syncBeforeImageWidth();
+    window.addEventListener("resize", syncBeforeImageWidth, { passive: true });
+    if ("ResizeObserver" in window) {
+      new ResizeObserver(syncBeforeImageWidth).observe(slider);
+    }
 
     if (range) {
       range.addEventListener("input", function () {
@@ -72,12 +85,16 @@
 
     slider.addEventListener("pointerdown", function (e) {
       dragging = true;
+      slider.setPointerCapture(e.pointerId);
       moveFromEvent(e.clientX);
     });
-    window.addEventListener("pointermove", function (e) {
+    slider.addEventListener("pointermove", function (e) {
       if (dragging) moveFromEvent(e.clientX);
     });
-    window.addEventListener("pointerup", function () {
+    slider.addEventListener("pointerup", function () {
+      dragging = false;
+    });
+    slider.addEventListener("pointercancel", function () {
       dragging = false;
     });
 
