@@ -37,6 +37,9 @@ names** - no code changes needed:
 | `before-1.jpg` / `after-1.jpg` | The large draggable before/after slider |
 | `before-2.jpg` / `after-2.jpg` | First card in the gallery grid |
 | `before-3.jpg` / `after-3.jpg` | Second card in the gallery grid |
+| `hydrangea-1.jpg` | Featured planting project (left) |
+| `hydrangea-2.jpg` | Featured planting project (centre, wide) |
+| `hydrangea-3.jpg` | Featured planting project (right) |
 | `about.jpg` | Photo in the "About" section |
 | `Logo.jpg` | Your logo (header, footer, favicon) |
 
