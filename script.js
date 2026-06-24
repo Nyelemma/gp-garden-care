@@ -66,6 +66,9 @@
     };
 
     syncBeforeImageWidth();
+    if (beforeImg) {
+      beforeImg.addEventListener("load", syncBeforeImageWidth);
+    }
     window.addEventListener("resize", syncBeforeImageWidth, { passive: true });
     if ("ResizeObserver" in window) {
       new ResizeObserver(syncBeforeImageWidth).observe(slider);

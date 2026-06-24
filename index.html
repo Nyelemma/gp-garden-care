@@ -22,6 +22,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" as="image" href="Images/hero.jpg" fetchpriority="high" />
 
     <!-- Open Graph / social preview -->
     <meta property="og:type" content="website" />
@@ -243,11 +244,11 @@
           <div class="ba-sliders reveal">
             <div class="ba-slider">
               <div class="ba-image ba-after">
-                <img src="Images/after-1.jpg" alt="Garden after clearance and tidy-up by GP Garden Care" loading="eager" decoding="async" width="1600" height="1000" />
+                <img src="Images/after-1.jpg" alt="Garden after clearance and tidy-up by GP Garden Care" loading="eager" decoding="async" fetchpriority="high" width="1200" height="675" />
                 <span class="ba-tag ba-tag-after">After</span>
               </div>
               <div class="ba-image ba-before">
-                <img src="Images/before-1.jpg" alt="Overgrown garden before clearance by GP Garden Care" loading="eager" decoding="async" width="1600" height="1000" />
+                <img src="Images/before-1.jpg" alt="Overgrown garden before clearance by GP Garden Care" loading="eager" decoding="async" width="1200" height="900" />
                 <span class="ba-tag ba-tag-before">Before</span>
               </div>
               <div class="ba-handle" role="slider" aria-label="Reveal before and after for job 1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
@@ -260,11 +261,11 @@
 
             <div class="ba-slider">
               <div class="ba-image ba-after">
-                <img src="Images/after-2.jpg" alt="Garden after transformation by GP Garden Care" loading="eager" decoding="async" width="1400" height="1000" />
+                <img src="Images/after-2.jpg" alt="Garden after transformation by GP Garden Care" loading="lazy" decoding="async" width="1200" height="900" />
                 <span class="ba-tag ba-tag-after">After</span>
               </div>
               <div class="ba-image ba-before">
-                <img src="Images/before-2.jpg" alt="Garden before transformation by GP Garden Care" loading="eager" decoding="async" width="1400" height="1000" />
+                <img src="Images/before-2.jpg" alt="Garden before transformation by GP Garden Care" loading="lazy" decoding="async" width="1200" height="900" />
                 <span class="ba-tag ba-tag-before">Before</span>
               </div>
               <div class="ba-handle" role="slider" aria-label="Reveal before and after for job 2" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0">
@@ -286,7 +287,7 @@
               </p>
             </div>
             <figure class="project-shot project-shot--featured">
-              <img src="Images/hydrangea.jpg" alt="Hydrangea planting project completed by GP Garden Care" loading="lazy" width="1400" height="900" />
+              <img src="Images/hydrangea.jpg" alt="Hydrangea planting project completed by GP Garden Care" loading="lazy" decoding="async" width="1200" height="900" />
             </figure>
           </div>
         </div>
@@ -328,7 +329,7 @@
       <section class="section about" id="about" aria-labelledby="about-title">
         <div class="wrap about-grid">
           <div class="about-media reveal">
-            <img src="Images/about.jpg" alt="Professional gardening tools on a freshly mown lawn" />
+            <img src="Images/about.jpg" alt="Professional gardening tools on a freshly mown lawn" loading="lazy" decoding="async" width="1200" height="800" />
             <div class="about-badge">
               <strong>Award<br />Winner</strong>
               <span>2024 &amp; 2025</span>
