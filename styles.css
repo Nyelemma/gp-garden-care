@@ -569,6 +569,13 @@ a {
 .gallery {
   background: linear-gradient(180deg, var(--cream), var(--paper));
 }
+.ba-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 960px;
+  margin: 0 auto;
+}
 .ba-slider {
   position: relative;
   max-width: 960px;
@@ -714,6 +721,19 @@ a {
 .project-showcase-lead {
   color: var(--muted);
   font-size: 1.02rem;
+}
+.project-shot--featured {
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+.project-shot--featured img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
 }
 .project-showcase-grid {
   display: grid;

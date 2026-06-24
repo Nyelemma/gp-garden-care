@@ -9,3 +9,10 @@ desktop.ini
 
 # Logs
 *.log
+
+# Original uploads (web-optimised copies are used on the site)
+Images/Before *.jpeg
+Images/Before *.jpg
+Images/After *.jpg
+Images/after *.heic
+*.heic

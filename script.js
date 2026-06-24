@@ -44,11 +44,11 @@
   }
 
   /* ----- Before / After slider ----- */
-  var slider = document.getElementById("ba-slider");
-  if (slider) {
-    var before = document.getElementById("ba-before");
-    var handle = document.getElementById("ba-handle");
-    var range = document.getElementById("ba-range");
+  document.querySelectorAll(".ba-slider").forEach(function (slider) {
+    var before = slider.querySelector(".ba-before");
+    var handle = slider.querySelector(".ba-handle");
+    var range = slider.querySelector(".ba-range");
+    if (!before || !handle) return;
 
     var setPosition = function (percent) {
       var p = Math.max(0, Math.min(100, percent));
@@ -93,7 +93,7 @@
     });
 
     setPosition(50);
-  }
+  });
 
   /* ----- Scroll reveal ----- */
   var revealEls = document.querySelectorAll(".reveal");
