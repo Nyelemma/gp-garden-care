@@ -297,7 +297,7 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 720px;
+  max-width: 920px;
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -313,13 +313,33 @@ a {
 .eyebrow-dark {
   color: var(--lime-deep);
 }
-.hero-title {
+.hero-promise {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.82rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--lime);
+}
+.hero-quote {
   font-family: var(--font-head);
   font-weight: 800;
-  font-size: clamp(2.6rem, 6vw, 4.4rem);
-  line-height: 1.04;
-  letter-spacing: -0.5px;
-  margin-bottom: 22px;
+  font-size: clamp(2.4rem, 7.5vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  max-width: 900px;
+  text-wrap: balance;
+}
+.hero-cite {
+  margin-bottom: 28px;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.82);
 }
 .hero-lead {
   font-size: clamp(1.05rem, 2vw, 1.28rem);
@@ -543,56 +563,6 @@ a {
 .service-card p {
   color: var(--muted);
   font-size: 0.98rem;
-}
-
-/* ---------- Brand quote ---------- */
-.brand-quote {
-  position: relative;
-  padding: 88px 0;
-  background:
-    linear-gradient(135deg, rgba(18, 35, 24, 0.94), rgba(30, 58, 42, 0.88)),
-    url("Images/hero.jpg") center/cover no-repeat fixed;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
-}
-.brand-quote::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 40%, rgba(188, 219, 59, 0.14), transparent 58%);
-  pointer-events: none;
-}
-.brand-quote-inner {
-  position: relative;
-  z-index: 1;
-  max-width: 900px;
-}
-.brand-quote-eyebrow {
-  display: inline-block;
-  margin-bottom: 18px;
-  font-size: 0.8rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--lime);
-}
-.brand-quote-text {
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: clamp(2rem, 5.5vw, 3.6rem);
-  line-height: 1.12;
-  letter-spacing: -0.4px;
-  text-transform: uppercase;
-  margin: 0;
-}
-.brand-quote-cite {
-  margin-top: 22px;
-  font-size: 1rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
-  font-weight: 600;
 }
 
 /* ---------- Before & After ---------- */
@@ -1208,9 +1178,6 @@ textarea {
   }
   .project-shot--wide {
     grid-column: 1 / -1;
-  }
-  .brand-quote {
-    background-attachment: scroll;
   }
   .about-grid {
     grid-template-columns: 1fr;
