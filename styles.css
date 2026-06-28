@@ -866,7 +866,10 @@ a {
   position: relative;
 }
 .about-media img {
+  display: block;
   width: 100%;
+  height: auto;
+  max-width: 100%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
 }
